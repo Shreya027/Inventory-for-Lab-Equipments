@@ -1,0 +1,23 @@
+    
+
+    <h1> Inventory</h1>
+    {% for item in full %}
+    <ul>
+    <img src="/media/{{item.image}}">
+    <li >{{item.product_name}}</li>
+    <li >Availability:{{item.availability}}</li>
+    <li >Item Id:{{item.id}}</li>
+    
+    <br>
+    <br>
+    <br>
+    </ul>
+    {% endfor %}
+
+
+
+    <form action="/inventorylist/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+   

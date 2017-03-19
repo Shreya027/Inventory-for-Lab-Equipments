@@ -1,0 +1,22 @@
+{% if items %}
+        <!--<p>Found {{ travel|length }} name{{ travel|pluralize }}.</p> -->
+        <ul>
+            {% for item in items %}
+            <li >{{ item.product_name }}</li>
+            <li >Specification :{{item.product_description}}</li>
+            <li >Department :{{item.department}}</li>
+            <li >Lender :{{item.lender}}</li>
+            <li >Safety deposit:{{item.safety_deposit}}</li>
+            <li >Contact_number :{{item.contact_number}}</li>
+            <li >Availability  :{{item.availability}}</li>
+            <img src="/media/{{item.image}}">
+
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No names matched your search criteria.</p>
+
+{% endif %}
+
+
+
