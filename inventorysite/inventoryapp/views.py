@@ -25,6 +25,9 @@ def logout_inventory(request):
 
 def index(request):
 	return render(request,'index.html')
+
+def arrival(request):
+    return render(request,'arrival.html')    
 #if request.user.is_authenticated():
 #currentuser = request.user
 

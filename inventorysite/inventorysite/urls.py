@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^index/', views.index),
     url(r'^lenderform/$',views.lenderform),
     url(r'^cart/$',views.cart),
+    url(r'^arrival/$',views.arrival),
     url(r'^inventorylist/$',views.inventorylist),
 ]
 
