@@ -26,11 +26,11 @@ class Lender(models.Model):
 
 class Borrower(models.Model):
     borrower = models.CharField(max_length=200)
-    sap_id = models.CharField(max_length=20)
+    sap_id = models.IntegerField()
     email = models.CharField(max_length=100)
     product_id=models.IntegerField()
     def __str__(self):
-        return self.product_id
+        return self.borrower
 
 
 

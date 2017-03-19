@@ -2,7 +2,7 @@
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
-from .models import Lender
+from .models import Lender,Borrower
 from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -83,6 +83,10 @@ def lenderform(request):
 
 
 def inventorylist(request):
+    if request.user.is_authenticated():
+        currentuser = request.user
+
+
     errors = []
     if 'q' in request.GET :
         q = request.GET['q']
@@ -91,13 +95,35 @@ def inventorylist(request):
         elif len(q) > 20:
             errors.append('Please enter at most 20 characters.')
         else:
-            item = Lender.objects.filter(product_name__icontains=q)
-            return render(request, 'search_results.html',
-                          {'item': item, 'query': q})
+            items = Lender.objects.filter(product_name__icontains=q)
+            equipment=items[0]
+            product_id=equipment.id
+            name=currentuser.first_name
+            sap_id=currentuser.username
+            email=currentuser.email
+            print currentuser
 
-    full=Place.objects.all()        
-    return render(request, 'search_form.html',
+
+            student=Borrower(borrower=name,sap_id=sap_id,email=email,product_id=product_id)
+            student.save()
+
+
+
+
+
+
+            return render(request, 'inventoryresulttest.html',
+                          {'items': items, 'query': q})
+
+    full=Lender.objects.all()        
+    return render(request, 'inventorytest.html',
               {'errors': errors,'full':full})
+
+
+
+
+
+
 
 
 
