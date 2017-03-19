@@ -2,11 +2,17 @@
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
-from .models import Lender
+from .models import Lender,Borrower
 from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+
+from inventorysite.forms import LenderForm
+from django.template import RequestContext
+from django.shortcuts import render_to_response
+
+
 
 
 
@@ -58,5 +64,71 @@ def login_inventory(request):
             return HttpResponse("Invalid Login details.Are you trying to Sign up?")
     else:
         return render(request,'login.html')
+
+
+
+def lenderform(request):
+    if request.method == 'POST':
+        form = LenderForm(request.POST ,request.FILES or None )
+        if form.is_valid():
+            cd = form.cleaned_data
+            Lender.objects.create(lender=cd['lender'],product_name=cd['product_name'],product_description=cd['product_description'],image=request.FILES['image'],department=cd['department'],safety_deposit=cd['safety_deposit'],contact_number=cd['contact_number'])
+        form = LenderForm()    
+        return render(request,'testlenderform.html',{'form': form})               
+    else:
+        form = LenderForm()
+    return render(request, 'testlenderform.html', {'form': form})    
+
+
+
+
+def inventorylist(request):
+    if request.user.is_authenticated():
+        currentuser = request.user
+
+
+    errors = []
+    if 'q' in request.GET :
+        q = request.GET['q']
+        if not q:
+            errors.append('Enter a search term.')
+        elif len(q) > 20:
+            errors.append('Please enter at most 20 characters.')
+        else:
+            items = Lender.objects.filter(product_name__icontains=q)
+            equipment=items[0]
+            product_id=equipment.id
+            name=currentuser.first_name
+            sap_id=currentuser.username
+            email=currentuser.email
+            print currentuser
+
+
+            student=Borrower(borrower=name,sap_id=sap_id,email=email,product_id=product_id)
+            student.save()
+
+
+
+
+
+
+            return render(request, 'inventoryresulttest.html',
+                          {'items': items, 'query': q})
+
+    full=Lender.objects.all()        
+    return render(request, 'inventorytest.html',
+              {'errors': errors,'full':full})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
