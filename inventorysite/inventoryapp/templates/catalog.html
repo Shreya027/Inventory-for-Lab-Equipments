@@ -163,37 +163,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- //header-ends -->
 				
 				<!--content-->
-			<div class="content">
-<div class="women_main">
-	<!-- start content -->
-	<div class="catalog">				
-			<div id="tabs" class="tabs">
-					
-						<div class="graph">
-							<nav>
-								<ul>
-									<li class="tab-current"><a href="#section-1" class="icon-shop"><span>General</span></a></li>
-							</nav>
-								<div class="content tab">
-									<section id="section-1" class="content-current">
-										{% if form.errors %}
-        									<p style="color: red;">
-            									Please correct the error{{ form.errors|pluralize }} below.
-        									</p>
-    									{% endif %}
- 												
-    									<form action="" method="post" enctype="multipart/form-data">
-        									<div id="d" ><table>
-            									{{ form.as_table }}
-        										</table>
-        									{% csrf_token %}
-        									<input type="submit" value="Submit"></div>
-    									</form>
-									</section>																
-								</div><!-- /content -->
-						</div>					<!-- /tabs -->
-			</div>								
-	</div>
+			<div class="content">			
+		{% if form.errors %}
+        	<p style="color: red;">
+        	Please correct the error{{ form.errors|pluralize }} below.
+        	</p>
+    	{% endif %}
+ 									
+    	<form action="" method="post" enctype="multipart/form-data">
+        	<div id="d" ><table>
+        		{{ form.as_table }}
+        	</table>
+        	{% csrf_token %}
+        	<input type="submit" value="Submit"></div>
+    	</form>
+	</div>								
 
 	<!-- end content -->
 	<div class="foot-top">
