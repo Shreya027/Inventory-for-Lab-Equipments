@@ -126,9 +126,3 @@ def inventorylist(request):
 
 
 
-
-
-
-
-
-
