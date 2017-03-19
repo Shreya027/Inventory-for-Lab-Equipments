@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Gretong a Ecommerce Admin Panel Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+<title>College Inventory</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -28,6 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/amcharts.js"></script>	
 <script src="js/serial.js"></script>	
 <script src="js/light.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
 <!-- //lined-icons -->
 <script src="js/jquery-1.10.2.min.js"></script>
    <!--pie-chart--->
@@ -71,6 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head> 
 <body>
+
    <div class="page-container">
    <!--/content-inner-->
 	<div class="left-content">
@@ -102,9 +105,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 							<div class="header">
 								<div class="head-t">
-									<div class="logo">
+							<!--		<div class="logo">
 										<a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""> </a>
-									</div>
+									</div> -->
 										<!-- start header_right -->
 									<div class="header_right">
 										<div class="rgt-bottom">
@@ -163,38 +166,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!--content-->
 			<div class="content">
-					<div class="monthly-grid">
-						<div class="panel panel-widget">
-							<div class="panel-title">
-							  Monthly Status Report
-							  
-							</div>
-							<div class="panel-body">
-								<!-- status -->
-								<div class="contain">	
-									<div class="gantt"></div>
-								</div>
-								<!-- status -->
-							</div>
-						</div>
-					</div>
+					
 			
 						<!--//area-->
 							<div class="col-md-5 skil">
 								<div class="content-top-1">
 									<div class="col-md-6 top-content">
-										<h5>Tasks</h5>
-										<label>8761</label>
+										<h5>Equipments currently rented</h5>
+										<label>87</label>
 									</div>
 									<div class="col-md-6 top-content1">	   
-										<div id="demo-pie-1" class="pie-title-center" data-percent="25"> <span class="pie-value">25%</span> </div>
+										<div id="demo-pie-1" class="pie-title-center" data-percent="25"> <span class="pie-value">65%</span> </div>
 									</div>
 										<div class="clearfix"> </div>
 								</div>
 								<div class="content-top-1">
 									<div class="col-md-6 top-content">
-										<h5>Points</h5>
-										<label>6295</label>
+										<h5>Students volunteered</h5>
+										<label>575</label>
 									</div>
 									<div class="col-md-6 top-content1">	   
 										<div id="demo-pie-2" class="pie-title-center" data-percent="50"> <span class="pie-value">50%</span> </div>
@@ -203,8 +192,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="content-top-1">
 									<div class="col-md-6 top-content">
-										<h5>Cards</h5>
-										<label>3401</label>
+										<h5>Students helped</h5>
+										<label>785</label>
 									</div>
 									<div class="col-md-6 top-content1">	   
 										<div id="demo-pie-3" class="pie-title-center" data-percent="75"> <span class="pie-value">75%</span> </div>
@@ -261,411 +250,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="clearfix"></div>
 						
-					<div class="content-top">
-						<div class="col-md-6 content-top-lft">
+				<!--	<div class="content-top">
+						<div class="col-lg-12 content-top-center">
 							<div class="panel panel-widget">
 								<div class="panel-title">
-								  Real Time Updates
+								  Monthly Rental Details
 								 
 								</div>
 								<div class="panel-body">
 									<div class="demo-container">
 										<div id="placeholder" class="demo-placeholder"></div>
 									</div>
-									<p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+									
 								</div>
 							</div>
 						</div>
 		
-			<div class="col-md-6 content-top-2">
-				<!---start-chart---->
-				<!----->
-				<div class="content-graph">
-					<div class="content-color">
-						<div class="content-ch"><p><i></i>Chrome </p><span>100%</span>
-						<div class="clearfix"> </div>
-						</div>
-						<div class="content-ch1"><p><i></i>Safari</p><span> 50%</span>
-						<div class="clearfix"> </div>
-						</div>
-					</div>
-				<!--graph-->
-					<link rel="stylesheet" href="css/graph.css">
-				<!--//graph-->
-							<script src="js/jquery.flot.js"></script>
-									<script>
-									$(document).ready(function () {
-									
-										// Graph Data ##############################################
-										var graphData = [{
-												// Visits
-												data: [ [6, 1300], [7, 1600], [8, 1900], [9, 2100], [10, 2500], [11, 2200], [12, 2000], [13, 1950], [14, 1900], [15, 2000] ],
-												color: '#999999'
-											}, {
-												// Returning Visits
-												data: [ [6, 500], [7, 600], [8, 550], [9, 600], [10, 800], [11, 900], [12, 800], [13, 850], [14, 830], [15, 1000] ],
-												color: '#999999',
-												points: { radius: 4, fillColor: '#7f8c8d' }
-											}
-										];
-									
-										// Lines Graph #############################################
-										$.plot($('#graph-lines'), graphData, {
-											series: {
-												points: {
-													show: true,
-													radius: 5
-												},
-												lines: {
-													show: true
-												},
-												shadowSize: 0
-											},
-											grid: {
-												color: '#7f8c8d',
-												borderColor: 'transparent',
-												borderWidth: 20,
-												hoverable: true
-											},
-											xaxis: {
-												tickColor: 'transparent',
-												tickDecimals: 2
-											},
-											yaxis: {
-												tickSize: 1000
-											}
-										});
-									
-										// Bars Graph ##############################################
-										$.plot($('#graph-bars'), graphData, {
-											series: {
-												bars: {
-													show: true,
-													barWidth: .9,
-													align: 'center'
-												},
-												shadowSize: 0
-											},
-											grid: {
-												color: '#7f8c8d',
-												borderColor: 'transparent',
-												borderWidth: 20,
-												hoverable: true
-											},
-											xaxis: {
-												tickColor: 'transparent',
-												tickDecimals: 2
-											},
-											yaxis: {
-												tickSize: 1000
-											}
-										});
-									
-										// Graph Toggle ############################################
-										$('#graph-bars').hide();
-									
-										$('#lines').on('click', function (e) {
-											$('#bars').removeClass('active');
-											$('#graph-bars').fadeOut();
-											$(this).addClass('active');
-											$('#graph-lines').fadeIn();
-											e.preventDefault();
-										});
-									
-										$('#bars').on('click', function (e) {
-											$('#lines').removeClass('active');
-											$('#graph-lines').fadeOut();
-											$(this).addClass('active');
-											$('#graph-bars').fadeIn().removeClass('hidden');
-											e.preventDefault();
-										});
-									
-										// Tooltip #################################################
-										function showTooltip(x, y, contents) {
-											$('<div id="tooltip">' + contents + '</div>').css({
-												top: y - 16,
-												left: x + 20
-											}).appendTo('body').fadeIn();
-										}
-									
-										var previousPoint = null;
-									
-										$('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
-											if (item) {
-												if (previousPoint != item.dataIndex) {
-													previousPoint = item.dataIndex;
-													$('#tooltip').remove();
-													var x = item.datapoint[0],
-														y = item.datapoint[1];
-														showTooltip(item.pageX, item.pageY, y + ' visitors at ' + x + '.00h');
-												}
-											} else {
-												$('#tooltip').remove();
-												previousPoint = null;
-											}
-										});
-									
-									});
-									</script>
-				<div class="graph-container">
-									
-									<div id="graph-lines" style="padding: 0px;"> <canvas class="flot-base" width="883" height="528" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 883px; height: 528px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 49px; text-align: center;">6.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 138px; text-align: center;">7.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 225px; text-align: center;">8.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 314px; text-align: center;">9.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 398px; text-align: center;">10.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 489px; text-align: center;">11.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 575px; text-align: center;">12.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 664px; text-align: center;">13.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 752px; text-align: center;">14.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 486px; left: 840px; text-align: center;">15.00</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 470px; left: 51px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 316px; left: 23px; text-align: right;">1000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 163px; left: 20px; text-align: right;">2000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 9px; left: 20px; text-align: right;">3000</div></div></div><canvas class="flot-overlay" width="883" height="528" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 883px; height: 528px;"></canvas></div>
-									<div id="graph-bars" style="padding: 0px; display: none;"> <canvas class="flot-base" width="883" height="528" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 883px; height: 528px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 85px; text-align: center;">6.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 166px; text-align: center;">7.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 245px; text-align: center;">8.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 326px; text-align: center;">9.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 402px; text-align: center;">10.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 485px; text-align: center;">11.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 563px; text-align: center;">12.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 644px; text-align: center;">13.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 724px; text-align: center;">14.00</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 73px; top: 486px; left: 804px; text-align: center;">15.00</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 470px; left: 51px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 316px; left: 23px; text-align: right;">1000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 163px; left: 20px; text-align: right;">2000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 9px; left: 20px; text-align: right;">3000</div></div></div><canvas class="flot-overlay" width="883" height="528" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 883px; height: 528px;"></canvas></div>
-								</div>
-	
-		</div>
-		</div>
+			
+		</div>-->
 		<div class="clearfix"> </div>
 		</div>
 		<!--area-->					
-				<div class="area">
-					<div class="col-md-6 chrt-two area">
-						<h3 class="sub-tittle">Line Multi Chart</h3>
-							<div style="area">
-								<canvas id="canvas" style="width:100%;height:100%"></canvas>
-							</div>
-								<button id="randomizeData">Randomize Data</button>
-										<script>
-												var randomScalingFactor = function() {
-												return Math.round(Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1));
-													};
-												var randomColor = function(opacity) {
-												return 'rgba(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + (opacity || '.3') + ')';
-													};
+				<div class="content">
+					<div class="col-md-10 content-center">
+					<canvas id="myChart"></canvas>
 
-												var lineChartData = {
-													labels: ["January", "February", "March", "April", "May", "June", "July"],
-													datasets: [{
-														label: "My First dataset",
-														data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-														yAxisID: "y-axis-1",
-														}, {
-																label: "My Second dataset",
-																data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-																	yAxisID: "y-axis-2"
-																	}]
-																};
-
-																$.each(lineChartData.datasets, function(i, dataset) {
-																	dataset.borderColor = randomColor(0.4);
-																	dataset.backgroundColor = randomColor(1);
-																	dataset.pointBorderColor = randomColor(0.7);
-																	dataset.pointBackgroundColor = randomColor(0.5);
-																	dataset.pointBorderWidth = 1;
-																});
-
-																console.log(lineChartData);
-
-																window.onload = function() {
-																	var ctx = document.getElementById("canvas").getContext("2d");
-																	window.myLine = Chart.Line(ctx, {
-																		data: lineChartData,
-																		options: {
-																			
-																			hoverMode: 'label',
-																			stacked: false,
-																			scales: {
-																				xAxes: [{
-																					display: true,
-																					gridLines: {
-																						offsetGridLines: false
-																					}
-																				}],
-																				yAxes: [{
-																					type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-																					display: true,
-																					position: "left",
-																					id: "y-axis-1",
-																				}, {
-																					type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-																					display: true,
-																					position: "right",
-																					id: "y-axis-2",
-
-																					// grid line settings
-																					gridLines: {
-																						drawOnChartArea: false, // only want the grid lines for one axis to show up
-																					},
-																				}],
-																			}
-																		}
-																	});
-																};
-
-																$('#randomizeData').click(function() {
-																	lineChartData.datasets[0].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
-
-																	lineChartData.datasets[1].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
-
-																	window.myLine.update();
-																});
-										</script>
+						<h3 class="sub-tittle"></h3>
+							<div class="panel panel-widget">
+							<div class="panel-title">
+								  Departments for various equipments 
+								 
+								</div>
+									<div class="demo-container">
+										<div id="placeholder" class="demo-placeholder"></div>
+									</div>
+									<script type="text/javascript">
+										var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['General', 'Electronics', 'Chemical', 'Mechanical'],
+    datasets: [{
+      label: 'Departments',
+      data: [12, 19, 3, 17],
+      backgroundColor: "rgba(153,255,51,0.4)"
+    }]
+  }
+});
+									</script>
+								</div>
+										
 											<script src="js/Chart.js"></script>
 					</div>
-					<div class="col-md-6 chrt-three">
-						<h3 class="sub-tittle">Stacked bar chart</h3>
-							<div id="chartdiv1"></div>	
-									<script>
-											var chart = AmCharts.makeChart("chartdiv1", {
-																				  "type": "serial",
-																				  "theme": "light",
-																				  "rotate": true,
-																				  "marginBottom": 50,
-																				  "dataProvider": [{
-																					"age": "85+",
-																					"male": -0.1,
-																					"female": 0.3
-																				  }, {
-																					"age": "80-54",
-																					"male": -0.2,
-																					"female": 0.3
-																				  }, {
-																					"age": "75-79",
-																					"male": -0.3,
-																					"female": 0.6
-																				  }, {
-																					"age": "70-74",
-																					"male": -0.5,
-																					"female": 0.8
-																				  }, {
-																					"age": "65-69",
-																					"male": -0.8,
-																					"female": 1.0
-																				  }, {
-																					"age": "60-64",
-																					"male": -1.1,
-																					"female": 1.3
-																				  }, {
-																					"age": "55-59",
-																					"male": -1.7,
-																					"female": 1.9
-																				  }, {
-																					"age": "50-54",
-																					"male": -2.2,
-																					"female": 2.5
-																				  }, {
-																					"age": "45-49",
-																					"male": -2.8,
-																					"female": 3.0
-																				  }, {
-																					"age": "40-44",
-																					"male": -3.4,
-																					"female": 3.6
-																				  }, {
-																					"age": "35-39",
-																					"male": -4.2,
-																					"female": 4.1
-																				  }, {
-																					"age": "30-34",
-																					"male": -5.2,
-																					"female": 4.8
-																				  }, {
-																					"age": "25-29",
-																					"male": -5.6,
-																					"female": 5.1
-																				  }, {
-																					"age": "20-24",
-																					"male": -5.1,
-																					"female": 5.1
-																				  }, {
-																					"age": "15-19",
-																					"male": -3.8,
-																					"female": 3.8
-																				  }, {
-																					"age": "10-14",
-																					"male": -3.2,
-																					"female": 3.4
-																				  }, {
-																					"age": "5-9",
-																					"male": -4.4,
-																					"female": 4.1
-																				  }, {
-																					"age": "0-4",
-																					"male": -5.0,
-																					"female": 4.8
-																				  }],
-																				  "startDuration": 1,
-																				  "graphs": [{
-																					"fillAlphas": 0.8,
-																					"lineAlpha": 0.2,
-																					"type": "column",
-																					"valueField": "male",
-																					"title": "Male",
-																					"labelText": "[[value]]",
-																					"clustered": false,
-																					"labelFunction": function(item) {
-																					  return Math.abs(item.values.value);
-																					},
-																					"balloonFunction": function(item) {
-																					  return item.category + ": " + Math.abs(item.values.value) + "%";
-																					}
-																				  }, {
-																					"fillAlphas": 0.8,
-																					"lineAlpha": 0.2,
-																					"type": "column",
-																					"valueField": "female",
-																					"title": "Female",
-																					"labelText": "[[value]]",
-																					"clustered": false,
-																					"labelFunction": function(item) {
-																					  return Math.abs(item.values.value);
-																					},
-																					"balloonFunction": function(item) {
-																					  return item.category + ": " + Math.abs(item.values.value) + "%";
-																					}
-																				  }],
-																				  "categoryField": "age",
-																				  "categoryAxis": {
-																					"gridPosition": "start",
-																					"gridAlpha": 0.2,
-																					"axisAlpha": 0
-																				  },
-																				  "valueAxes": [{
-																					"gridAlpha": 0,
-																					"ignoreAxisWidth": true,
-																					"labelFunction": function(value) {
-																					  return Math.abs(value) + '%';
-																					},
-																					"guides": [{
-																					  "value": 0,
-																					  "lineAlpha": 0.2
-																					}]
-																				  }],
-																				  "balloon": {
-																					"fixedPosition": true
-																				  },
-																				  "chartCursor": {
-																					"valueBalloonsEnabled": false,
-																					"cursorAlpha": 0.05,
-																					"fullWidth": true
-																				  },
-																				  "allLabels": [{
-																					"text": "Male",
-																					"x": "28%",
-																					"y": "97%",
-																					"bold": true,
-																					"align": "middle"
-																				  }, {
-																					"text": "Female",
-																					"x": "75%",
-																					"y": "97%",
-																					"bold": true,
-																					"align": "middle"
-																				  }],
-																				 "export": {
-																					"enabled": true
-																				  }   
-
-																				});
-									</script>
-					</div>
-					<div class="clearfix"></div>
-				</div>
+					
 						<!--//area-->
 		<div class="fo-top-di">
 			<div class="foot-top">
 				
-					<div class="col-md-6 s-c">
+					<div class="col-sm-12 s-c">
 						<li>
 							<div class="fooll">
 								<h1>follow us on</h1>
@@ -707,14 +349,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h4>CUSTOMER CARE</h4>
 							<li><a href="contact.html">Help Center</a></li>
 							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="details.html">How To Buy</a></li>
-							<li><a href="checkout.html">Delivery</a></li>
 					</div>
 					<div class="col-md-2 abt">
 						<h4>ABOUT US</h4>
-							<li><a href="products.html">Our Stories</a></li>
-							<li><a href="products.html">Press</a></li>
-							<li><a href="faq.html">Career</a></li>
 							<li><a href="contact.html">Contact</a></li>
 					</div>
 					<div class="col-md-2 myac">
@@ -751,32 +388,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                            <div class="menu">
 									<ul id="menu" >
 										<li><a href="index.html"><i class="fa fa-tachometer"></i> <span>Home</span></a></li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> New Arrivals</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										   <ul id="menu-academico-sub" >
-										   <li id="menu-academico-avaliacoes" ><a href="shoes.html">Shoes</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="products.html">Watches</a></li>
-											<li id="menu-academico-boletim" ><a href="sunglasses.html">Sunglasses</a></li>
-										  </ul>
-										</li>
-										 <li id="menu-academico" ><a href="sunglasses.html"><i class="fa fa-file-text-o"></i> <span>Sunglasses</span></a></li>
-									<li><a href="sweater.html"><i class="lnr lnr-pencil"></i> <span>Sweater</span></a></li>
-									<li id="menu-academico" ><a href="catalog.html"><i class="fa fa-file-text-o"></i> <span>Catalog</span></a></li>
-									<li id="menu-academico" ><a href="shoes.html"><i class="lnr lnr-book"></i> <span>Shoes</span></a></li>
-									 <li><a href="bags.html"><i class="lnr lnr-envelope"></i> <span>Bags</span></a></li>
-									<li><a href="products.html"><i class="lnr lnr-chart-bars"></i> <span>Watches</span></a></li>
-							        <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Tabs & Calender</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										 <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href="tabs.html">Tabs</a></li>
-											<li id="menu-academico-boletim" ><a href="calender.html">Calender</a></li>
-
-										  </ul>
-									 </li>
-									<li><a href="#"><i class="lnr lnr-chart-bars"></i> <span>Forms</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-									  <ul>
-										<li><a href="input.html"> Input</a></li>
-										<li><a href="validation.html">Validation</a></li>
-									</ul>
-									</li>
+										 
+										 <li id="menu-academico" ><a href="sunglasses.html"><i class="fa fa-file-text-o"></i> <span>New Arrivals</span></a></li>
+									<li><a href="sweater.html"><i class="lnr lnr-pencil"></i> <span>Inventory</span></a></li>
+									<li id="menu-academico" ><a href="catalog.html"><i class="fa fa-file-text-o"></i> <span>Lender</span></a></li>
+									
+									 
+							        
+									
 								  </ul>
 								</div>
 							  </div>
