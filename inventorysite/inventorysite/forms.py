@@ -5,9 +5,11 @@ class LenderForm(forms.Form):
     lender = forms.CharField()
     product_name = forms.CharField()
     product_description = forms.CharField()
+    department=forms.CharField()
     safety_deposit=forms.IntegerField()
     contact_number=forms.IntegerField()
     image = forms.FileField()
+
 
 '''
 
@@ -19,3 +21,9 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'email', 'password')     
 
 '''
+
+
+
+
+
+

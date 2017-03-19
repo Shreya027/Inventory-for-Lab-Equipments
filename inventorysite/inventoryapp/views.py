@@ -8,6 +8,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 
+from inventorysite.forms import LenderForm
+from django.template import RequestContext
+from django.shortcuts import render_to_response
+
+
+
 
 
 def logout_inventory(request):
@@ -58,5 +64,26 @@ def login_inventory(request):
             return HttpResponse("Invalid Login details.Are you trying to Sign up?")
     else:
         return render(request,'login.html')
+
+
+
+def lenderform(request):
+    if request.method == 'POST':
+        form = LenderForm(request.POST ,request.FILES or None )
+        if form.is_valid():
+            cd = form.cleaned_data
+            Lender.objects.create(lender=cd['lender'],product_name=cd['product_name'],product_description=cd['product_description'],image=request.FILES['image'],department=cd['department'],safety_deposit=cd['safety_deposit'],contact_number=cd['contact_number'])
+        form = LenderForm()    
+        return render(request,'testlenderform.html',{'form': form})               
+    else:
+        form = LenderForm()
+    return render(request, 'testlenderform.html', {'form': form})    
+
+
+
+
+
+
+
 
 

@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^register/$', views.register),
     url(r'^logout/', views.logout_inventory),
     url(r'^index/', views.index),
+    url(r'^lenderform/$',views.lenderform),
 ]
 

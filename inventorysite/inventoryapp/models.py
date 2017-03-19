@@ -15,6 +15,7 @@ class Lender(models.Model):
     image = models.FileField(null=True,blank=True)
     product_name = models.CharField(max_length=100)
     product_description = models.CharField(max_length=500)
+    department=models.CharField(max_length=100,default="")
     safety_deposit= models.IntegerField()
     contact_number= models.IntegerField()
     availability=models.BooleanField(default=True)
