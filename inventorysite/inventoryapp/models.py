@@ -28,7 +28,7 @@ class Borrower(models.Model):
     borrower = models.CharField(max_length=200)
     sap_id = models.IntegerField()
     email = models.CharField(max_length=100)
-    product_id=models.IntegerField()
+    product_name=models.CharField(max_length=200)
     def __str__(self):
         return self.borrower
 
