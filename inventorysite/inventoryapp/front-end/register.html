@@ -206,73 +206,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form>
-				<div>
-					<label>
-						<input placeholder="first name:" type="text" tabindex="1" required="" autofocus="">
-					</label>
-				</div>
-				<div>
-					<label>
-						<input placeholder="last name:" type="text" tabindex="2" required="" autofocus="">
-					</label>
-				</div>
-				<div>
-					<label>
-						<input placeholder="email address:" type="email" tabindex="3" required="">
-					</label>
-				</div>
-				<div class="sky-form">
-					<div class="sky_form1">
-						<ul>
-							<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
-							<li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
-							<div class="clearfix"></div>
-						</ul>
-					</div>
-				</div>
-				<div>
-					<label>
-						<input placeholder="password" type="password" tabindex="4" required="">
-					</label>
-				</div>						
-				<div>
-					<label>
-						<input placeholder="retype password" type="password" tabindex="4" required="">
-					</label>
-				</div>	
-				<div>
-					<input type="submit" value="create an account">
-				</div>
-				<div class="sky-form">
-					<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>i agree to shoppe.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
-				</div>
-			</form>
+			<form id="login-form" class="form" action="#" method="POST" role="form">
+          {% csrf_token %}
+              <div class="form-group">
+                  <label class="form-label" for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" required>
+              </div>
+              <div class="form-group">
+                  <label class="form-label" for="name">Sap Id</label>
+                  <input type="text" class="form-control" id="sap_id" name="sap_id" placeholder="Sap Id" tabindex="1" required>
+              </div>
+
+
+              <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+              </div>                            
+              <div class="form-group">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" class="form-control" id="passoword" name="password" placeholder="Password" tabindex="3" required>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-start-order" value="create an account">Register</button>
+              </div>
+          </form>
 			<!-- /Form -->
+
+
+
 		</div>
 	</div>
 	<div class="registration_left">
 		<h2>existing user</h2>
 		 <div class="registration_form">
 		 <!-- Form -->
-			<form>
-				<div>
-					<label>
-						<input placeholder="email:" type="email" tabindex="3" required="">
-					</label>
-				</div>
-				<div>
-					<label>
-						<input placeholder="password" type="password" tabindex="4" required="">
-					</label>
-				</div>						
-				<div>
-					<input type="submit" value="sign in">
-				</div>
-				<div class="forget">
-					<a href="#">forgot your password</a>
-				</div>
-			</form>
+			<form id="login-form" class="form" action="#" method="POST" role="form">
+          {% csrf_token %}
+              <div class="form-group">
+                  <label class="form-label" for="sap_id">Sap Id</label>
+                  <input type="text" class="form-control" id="sap_id" name="sap_id" placeholder="Sap Id" tabindex="1" required>
+              </div>                            
+              <div class="form-group">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" class="form-control" id="passoword" name="password" placeholder="Password" tabindex="2" required>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-start-order">Login</button>
+              </div>
+          </form>
 			<!-- /Form -->
 			</div>
 	</div>
@@ -280,27 +261,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 	<!-- end content -->
-	<div class="foot-top">
-	
-		
-		<div class="col-md-6 s-c">
-			<div class="stay">
-						<div class="stay-left">
-							<form>
-								<input type="text" placeholder="Enter your email" required="">
-							</form>
-						</div>
-						<div class="btn-1">
-							<form>
-								<input type="submit" value="join">
-							</form>
-						</div>
-							<div class="clearfix"> </div>
-			</div>
-		</div>
-			<div class="clearfix"> </div>
-	
-</div>
+
 <div class="footer">
 					<div class="col-md-3 cust">
 						<h4>CUSTOMER CARE</h4>

@@ -45,7 +45,7 @@ def register(request):
 
         user = authenticate(username = username, password = password)
         login(request, user)
-        return redirect('/index/')
+        return redirect('/login/')
     else:
         return render(request,'register.html')   
 
@@ -63,7 +63,7 @@ def login_inventory(request):
         else:
             return HttpResponse("Invalid Login details.Are you trying to Sign up?")
     else:
-        return render(request,'login.html')
+        return render(request,'register.html')
 
 
 
@@ -97,14 +97,14 @@ def inventorylist(request):
         else:
             items = Lender.objects.filter(product_name__icontains=q)
             equipment=items[0]
-            product_id=equipment.id
+            product_name=equipment.product_name
             name=currentuser.first_name
             sap_id=currentuser.username
             email=currentuser.email
             print currentuser
 
 
-            student=Borrower(borrower=name,sap_id=sap_id,email=email,product_id=product_id)
+            student=Borrower(borrower=name,sap_id=sap_id,email=email,product_name=product_name)
             student.save()
 
 
@@ -118,6 +118,21 @@ def inventorylist(request):
     full=Lender.objects.all()        
     return render(request, 'inventorytest.html',
               {'errors': errors,'full':full})
+
+
+
+
+
+def cart(request):
+
+    if request.user.is_authenticated():
+        currentuser = request.user
+        name=currentuser.first_name
+        items = Borrower.objects.filter(borrower__icontains=name)
+        return render(request, 'cart.html',
+              {'items':items})
+
+
 
 
 
