@@ -141,9 +141,3 @@ def cart(request):
 
 
 
-
-
-
-
-
-
