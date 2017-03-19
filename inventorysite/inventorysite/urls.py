@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^logout/', views.logout_inventory),
     url(r'^index/', views.index),
     url(r'^lenderform/$',views.lenderform),
+    url(r'^cart/$',views.cart),
     url(r'^inventorylist/$',views.inventorylist),
 ]
 
