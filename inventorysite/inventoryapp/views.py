@@ -119,11 +119,8 @@ def inventorylist(request):
     return render(request, 'inventorytest.html',
               {'errors': errors,'full':full})
 
-
-
-
-
-
+def lenderr(request):
+    return render(request,'catalog.html')
 
 
 
