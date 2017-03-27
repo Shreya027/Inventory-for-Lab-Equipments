@@ -126,6 +126,8 @@ def inventorylist(request):
 
 
 
+
+
 def cart(request):
 
     if request.user.is_authenticated():
@@ -134,6 +136,18 @@ def cart(request):
         items = Borrower.objects.filter(borrower__icontains=name)
         return render(request, 'cart.html',
               {'items':items})
+
+    else:
+        return HttpResponse("Please login")
+
+
+def arrival(request):
+    
+    items = Lender.objects.all()
+
+    return render(request, 'arrival.html',
+              {'items':items})
+
 
 
 

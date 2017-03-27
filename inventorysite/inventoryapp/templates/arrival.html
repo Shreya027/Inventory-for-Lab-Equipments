@@ -167,13 +167,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- grids_of_4 -->
 		<div class="grids_of_4">
-		 
+		 	
+		 	{% for item in items %}
 			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box">
 			   	   <!--	 <img src="images/w8.jpg" class="img-responsive" alt=""> -->
-				   	  </a>
+			   	   <li >{{ item.product_name }}</li>
+            <li >{{item.product_description}}</li>
+          
+            <img src="/media/{{item.image}}">
+
+
+
+
+
+				   	
 			   	</div>
 			</div>
+			{% endfor %}
+			
 			<div class="clearfix"></div>
 		</div>
 
