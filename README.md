@@ -4,6 +4,8 @@ Built during DJACM Inter-college Hackathon , API. Basically an inventory for col
 
 ## Tech Stack
 - **Django Backend**
+- **Javascript**
+- **Misago**
 - **HTML, CSS and Bootstrap**
 
 
